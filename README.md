@@ -1,3 +1,4 @@
+
 <h1>yourweathernow</h1>
 
 <h3>Live at: https://kmsutula.github.io/YourWeatherNow/</h3>
@@ -21,5 +22,5 @@ Game options like number of questions, difficulty, and category are customizable
 <p>This project was my first application built with Angular, and gave me a chance to discover many of its features. Notably, I learned about the power of Injectables and passing data between components using Input and Output. I also had a chance to learn about transitions in Angular by creating a custom trigger. My biggest obstacles with Angular were deciding where I should do the fetching/transformation/assignment of data(child or parent), and determining how the handling of data affected the transition of DOM elements on enter and leave. Intially, I used "remove()" to remove each weather widget from the page on click, but this prevented my transition from triggering and kept the deleted data the array. This was fixed by splicing the removed element out of the data array, which fixed both problems.</p> <p>This project also greatly expanded my understanding of TypeScript, as I utilized custom types and constructor functions. I spent more time using class based components than I have in my use of React. </p>
 
 <h2>📸 Screenshots:</h2>
-<img src="https://res.cloudinary.com/de8tjvy2h/image/upload/v1669417944/Github%20Pages/YourWeatherNow.png">
+<img src="https://user-images.githubusercontent.com/94947661/204108943-ac7bb232-bf4d-46dd-ab3f-ce7de94fcd4b.png">
 
