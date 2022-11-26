@@ -6,7 +6,7 @@
 <p>A quiz application that pulls trivia questions/answers from the Open Trivia Database API and provides a score based on performance. 
 Game options like number of questions, difficulty, and category are customizable by the user. The design is based on an 80s video game, drawing on this theme with on neon colors and pixelated text and elements. The site was built mobile-first.</p>
 
-<p>This is the final Solo Project of Bob Ziroll's React Course on Scrimba designed and developed from scratch by me.</p>
+
 
 <h2>⚒️ Built with:</h2>
 <ul>
