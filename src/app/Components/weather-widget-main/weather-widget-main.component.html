@@ -1,0 +1,74 @@
+<div id="divWeatherMain">
+  <div
+    *ngFor="let currentWeatherData of allWeatherData; let i = index"
+    class="weather-inner-container"
+    @myInsertRemoveTrigger
+  >
+    <div *ngIf="currentWeatherData.isDay" class="day weather-widget">
+      <button class="xmark" (click)="remove(i)">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="weatherWidgetRow dayTime">
+        <i class="fas fa-3x fa-sun sun"></i>
+      </div>
+      <div class="weatherWidgetRow iconDiv">
+        <i class="{{ showIcon(currentWeatherData) }}"></i>
+      </div>
+      <div class="weatherWidgetRow" id="main-temp">
+        {{ currentWeatherData.temp_faren }}°
+      </div>
+      <div class="weatherWidgetRow" id="avg-temps">
+        {{ currentWeatherData.temp_min }}° / {{ currentWeatherData.temp_max }}
+      </div>
+      <div class="weatherWidgetRow" id="feels-like">
+        Feels like: {{ currentWeatherData.temp_feels_like }}°
+      </div>
+      <div class="weatherWidgetRow" id="place-name">
+        {{ currentWeatherData.name }}
+      </div>
+      <div class="weatherWidgetRow" id="humidity">
+        Humidity: {{ currentWeatherData.main.humidity }}%
+      </div>
+    </div>
+
+    <div *ngIf="!currentWeatherData.isDay" class="night weather-widget">
+      <button class="xmark" (click)="remove(i)">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="weatherWidgetRow nightTime">
+        <i class="fas fa-3x fa-moon moon"></i>
+      </div>
+      <div class="weatherWidgetRow iconDiv">
+        <i class="fas fa-cloud fa-3x cloud"></i>
+      </div>
+      <div class="weatherWidgetRow" id="main-temp">
+        {{ currentWeatherData.temp_faren }}°
+      </div>
+      <div class="weatherWidgetRow" id="avg-temps">
+        {{ currentWeatherData.temp_min }}° / {{ currentWeatherData.temp_max }}
+      </div>
+      <div class="weatherWidgetRow" id="feels-like">
+        Feels like: {{ currentWeatherData.temp_feels_like }}°
+      </div>
+      <div class="weatherWidgetRow" id="place-name">
+        {{ currentWeatherData.name }}
+      </div>
+      <div class="weatherWidgetRow" id="humidity">
+        Humidity: {{ currentWeatherData.main.humidity }}%
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div *ngIf="currentWeatherData.isDay" class="weatherWidgetRow dayTime">
+      <i class="fas fa-3x fa-sun sun"></i>
+    </div>
+    <div *ngIf="currentWeatherData.isDay" class="weatherWidgetRow nightTime">
+      <i class="fas fa-3x fa-sun sun"></i>
+    </div> -->
+<!-- <div *ngIf="currentWeatherData.isDay" class="weatherWidgetRow">
+      <i class="fas fa-3x fa-sun sun"></i>
+    </div>
+    <div *ngIf="!currentWeatherData.isDay" class="weatherWidgetRow">
+      <i class="fas fa-3x fa-moon moon"></i>
+    </div> -->

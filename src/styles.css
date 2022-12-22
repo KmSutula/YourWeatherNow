@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(28, 31, 44, 0.9);
+  font-family: "Nunito", sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  color: rgba(213, 226, 235, 0.8);
+  text-align: center;
+  /* margin: 20px 0; */
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 50px;
+  }
+}

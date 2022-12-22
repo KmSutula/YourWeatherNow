@@ -1,0 +1,16 @@
+<div id="user-input">
+  <p>Select your location:</p>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <input
+      ngx-google-places-autocomplete
+      #placesRef="ngx-places"
+      (onAddressChange)="handleAddressChange($event)"
+      type="text"
+      name="city"
+      id="autocomplete"
+      placeholder=""
+      [(ngModel)]="name"
+    />
+    <button>Submit</button>
+  </form>
+</div>

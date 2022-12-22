@@ -1,0 +1,115 @@
+#divWeatherMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  flex-wrap: wrap;
+  height: auto;
+  margin: 50px auto;
+}
+.weather-inner-container {
+  position: relative;
+
+  width: 230px;
+  height: 220px;
+  margin: 10px 10px;
+  border-radius: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.day {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  color: rgb(213, 226, 235);
+  background: linear-gradient(
+    180deg,
+    rgb(156, 186, 214) 0%,
+    rgb(112, 114, 182) 75%,
+    rgb(93, 95, 151) 100%
+  );
+  overflow: auto;
+}
+.night {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: linear-gradient(
+    180deg,
+    #000 0%,
+    rgba(8, 7, 42, 1) 75%,
+    rgb(8, 10, 63) 100%
+  );
+}
+
+.weatherWidgetRow {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  white-space: wrap;
+  font-size: 12px;
+}
+#main-temp {
+  font-size: 32px;
+  margin-top: 5px;
+}
+
+#place-name {
+  font-size: 25px;
+  margin-top: 10px;
+  text-align: center;
+}
+.iconDiv {
+  margin-top: -30px;
+}
+
+.sun {
+  margin-top: 10px;
+  color: #f7f780;
+  filter: drop-shadow(1px 1px 3px #f7f780);
+}
+
+.moon {
+  margin-top: 10px;
+  color: #fff;
+  filter: drop-shadow(1px 1px 3px #fff);
+}
+
+.day .weatherWidgetRow .cloud {
+  color: rgb(200, 212, 216);
+  filter: drop-shadow(1px 1px 5px rgb(104, 175, 197));
+  animation: cloudMovements infinite 10s ease-in-out alternate;
+}
+
+.night .weatherWidgetRow .cloud {
+  color: rgb(104, 175, 197);
+  filter: drop-shadow(1px 1px 5px rgb(104, 175, 197));
+  animation: cloudMovements infinite 10s ease-in-out alternate;
+}
+
+.xmark {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+}
+
+@keyframes cloudMovements {
+  from {
+    margin-left: -55px;
+  }
+  to {
+    margin-left: 65px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #divWeatherMain {
+    width: 60%;
+  }
+}

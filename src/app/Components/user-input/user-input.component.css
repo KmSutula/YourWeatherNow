@@ -1,0 +1,51 @@
+#user-input {
+  width: 300px;
+  margin: 0 auto;
+  color: rgba(213, 226, 235, 0.8);
+  font-size: 30px;
+  text-align: center;
+  text-transform: lowercase;
+}
+p {
+  margin: 10px 0;
+}
+input {
+  width: 250px;
+  height: 80px;
+  font-size: 25px;
+  color: rgba(213, 226, 235, 0.8);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: transparent;
+  border: 3px solid rgb(28, 31, 44);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+input:focus,
+input:active {
+  outline: none;
+}
+
+button {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  text-transform: lowercase;
+  border-radius: 10px;
+  color: rgb(28, 31, 44);
+  border: none;
+  background-color: rgba(213, 226, 235, 0.8);
+  transition: 0.3s all;
+  cursor: pointer;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+button:hover {
+  background-color: rgba(213, 226, 235, 1);
+  /* border: 1px solid rgb(28, 31, 44); */
+}
+button:active {
+  scale: 0.9;
+}
